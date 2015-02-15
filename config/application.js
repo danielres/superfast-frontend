@@ -22,7 +22,8 @@ module.exports = function(lineman) {
     //     module: "myModuleName"
     //   }
     // }
-
+    livereload: true,
+    
     server: {
       pushState: true
       // API Proxying
