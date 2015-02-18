@@ -29,5 +29,15 @@ module.exports = {
         {title: 'Treasure Island', author: 'Stephenson'}
       ]);
     });
+
+    app.get('/api/v1/blog/posts', function (req, res) {
+      res.json([
+        { id: 1, title: 'Title 1 fr', body: 'Lorem 1 fr', author: { id: 1, name: 'Lolo' }, lang: 'fr', },
+        { id: 2, title: 'Title 2 fr', body: 'Lorem 2 fr', author: { id: 2, name: 'Toto' }, lang: 'fr', },
+        { id: 3, title: 'Title 3 en', body: 'Lorem 3 en', author: { id: 1, name: 'Lolo' }, lang: 'en', },
+        { id: 4, title: 'Title 4 en', body: 'Lorem 4 en', author: { id: 1, name: 'Lolo' }, lang: 'en', },
+        { id: 5, title: 'Title 5 en', body: 'Lorem 5 en', author: { id: 1, name: 'Lolo' }, lang: 'en', },
+      ]);
+    });
   }
 };
