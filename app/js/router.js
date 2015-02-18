@@ -17,6 +17,11 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     controller: 'BooksResourceController'
   });
 
+  $routeProvider.when('/posts', {
+    templateUrl: 'posts.html',
+    controller: 'PostsController'
+  });
+
   $routeProvider.when('/$http/list-of-books', {
     templateUrl: 'books_http.html',
     controller: 'BooksHttpController',
