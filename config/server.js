@@ -39,5 +39,14 @@ module.exports = {
         { id: 5, title: 'Title 5 en', body: 'Lorem 5 en', author: { id: 1, name: 'Lolo' }, lang: 'en', },
       ]);
     });
+
+    app.get('/api/v1/blog/posts/:id', function (req, res) {
+      var id = req.params.id;
+      res.json(
+        { id: id, title: 'Title fr ' + id, body: 'Lorem fr ' + id, author: { id: 1, name: 'Lolo' }, lang: 'fr', }
+      );
+    });
+
+
   }
 };

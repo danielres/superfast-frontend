@@ -22,6 +22,11 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     controller: 'PostsController'
   });
 
+  $routeProvider.when('/posts/:id', {
+    templateUrl: 'post.html',
+    controller: 'PostController'
+  });
+
   $routeProvider.when('/$http/list-of-books', {
     templateUrl: 'books_http.html',
     controller: 'BooksHttpController',
